@@ -8,7 +8,9 @@ public interface ICategoriaService {
 
     public Categoria buscarCategoriaPorId(Long id);
 
-    public Categoria guardarCategoria(Categoria categoria); // Es el agregar y el editar
+    public Boolean  guardarCategoria(Categoria categoria); 
 
     public void eliminarCategoria(Categoria categoria);
+
+    public Boolean verificarCategoriaDuplicada(Categoria categorianNueva);  
 }
