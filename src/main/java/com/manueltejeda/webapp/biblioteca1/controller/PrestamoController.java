@@ -20,7 +20,7 @@ import com.manueltejeda.webapp.biblioteca1.service.PrestamoService;
 
 @Controller
 @RestController
-@RequestMapping(value = "")
+@RequestMapping
 public class PrestamoController {
     @Autowired
     PrestamoService prestamoService;
@@ -58,7 +58,7 @@ public class PrestamoController {
         }
     }
 
-    @PutMapping("/libro")
+    @PutMapping("/prestamo")
     public ResponseEntity<Map<String, String>>editarPrestamo(@RequestParam Long id, @RequestBody Prestamo prestamoNuevo){
         Map<String,String> response = new HashMap<>();
         try {
